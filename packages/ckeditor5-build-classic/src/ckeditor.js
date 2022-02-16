@@ -6,6 +6,8 @@
 // The editor creator to use.
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
@@ -58,7 +60,9 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	CodeBlock,
+	Alignment
 ];
 
 // Editor configuration.
@@ -80,6 +84,8 @@ ClassicEditor.defaultConfig = {
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
+			'codeBlock',
+			'alignment',
 			'undo',
 			'redo'
 		]
